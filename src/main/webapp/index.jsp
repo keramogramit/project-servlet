@@ -1,3 +1,4 @@
+<%--@elvariable id="data" type="jakarta"--%>
 <%@ page import="com.tictactoe.Sign" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
@@ -34,6 +35,7 @@
 <c:set var="CROSSES" value="<%=Sign.CROSS%>"/>
 <c:set var="NOUGHTS" value="<%=Sign.NOUGHT%>"/>
 
+<%--@elvariable id="winner" type="jakarta"--%>
 <c:if test="${winner == CROSSES}">
     <h1>CROSSES WIN!</h1>
     <button onclick="restart()">Start again</button>
@@ -42,6 +44,7 @@
     <h1>NOUGHTS WIN!</h1>
     <button onclick="restart()">Start again</button>
 </c:if>
+<%--@elvariable id="draw" type="jakarta"--%>
 <c:if test="${draw}">
     <h1>IT'S A DRAW</h1>
     <br>
